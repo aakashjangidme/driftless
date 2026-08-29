@@ -13,6 +13,19 @@ All contributions go through GitHub PRs. Here's the full workflow.
 uv sync --group dev
 ```
 
+### Install pre-commit hooks
+
+```bash
+make install-hooks
+```
+
+This installs git pre-commit hooks that run `ruff`, `mypy`, and YAML/TOML
+validators on every commit. To run them manually:
+
+```bash
+make pre-commit
+```
+
 ## Workflow
 
 1. **Fork & clone** the repo, then create a feature branch:
@@ -25,12 +38,12 @@ uv sync --group dev
    git commit -S -m "feat: add new feature"
    ```
 
-3. **Run checks locally** before pushing:
+3. **Run checks** — pre-commit hooks run automatically on commit. To run manually:
    ```bash
-   uv run ruff format --check src/driftless
-   uv run ruff check src/driftless
-   uv run mypy src/driftless --ignore-missing-imports
-   uv run pytest tests/
+   make pre-commit        # all hooks
+   make lint              # ruff check only
+   make typecheck         # mypy only
+   make test             # pytest only
    ```
 
 4. **Push and open a PR**:
