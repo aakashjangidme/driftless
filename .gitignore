@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+.env.local
+.env.*.local
+.env.local
+
+# .driftless directory (Driftless state)
+.driftless/
+
+# Coverage data
+.coverage
+htmlcov/
+.tox/
+.pytest_cache/
+
+# Distribution / packaging
+.Python
+build/
+dist/
+*.egg-info/
+/*.egg
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.sbd
+/nbproject/private/
+
+# macOS
+.DS_Store
+/Library/Localizations/
+/Macromedia/
+/Library/Application Support/
+
+# UV
+
+.ruff_cache/
+.mypy_cahce/
+.venv/
