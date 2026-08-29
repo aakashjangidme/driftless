@@ -1,5 +1,6 @@
 ![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen.svg?logo=codecov)
 ![Build](https://img.shields.io/badge/pass-143%20tests-brightgreen.svg?logo=github-actions)
+![PyPI](https://img.shields.io/pypi/v/driftless-cli?logo=python&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.12+-blue.svg)
 
@@ -9,13 +10,15 @@
 
 ---
 
-## Installation via `uv tool`
+## Installation
 
-Driftless is packaged as a standard Python CLI tool buildable via `uv`.
+### From GitHub (latest release)
 
-### 1. Global Installation from Local Directory
+```bash
+uv tool install git+https://github.com/aakashjangidme/driftless.git
+```
 
-From the `driftless` project directory, run:
+### From local directory
 
 ```bash
 uv tool install .
@@ -27,29 +30,23 @@ To update or reinstall:
 uv tool install --force .
 ```
 
-### 2. Global Installation from Git Repository
-
-Once published to a Git repository:
-
-```bash
-uv tool install git+https://github.com/your-org/driftless.git
-```
-
-### 3. uv tool install --editable .
+### Editable install (development)
 
 ```bash
 uv tool install --editable .
 ```
 
-### 4. Manual install via pip
+## Table of Contents
 
-```bash
-pip install driftless-cli
-```
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Full SDLC Lifecycle](#full-sdlc-lifecycle)
+- [CLI Reference](#cli-reference)
+- [Test Status](#test-status)
+- [License](#license)
+- [Authors](#authors)
 
 ---
-
-## Quick Start
 
 ```bash
 driftless init
@@ -71,6 +68,14 @@ CREATED → SPECIFYING → PLANNING → IMPLEMENTING → VERIFYING → REVIEW �
 ---
 
 ## CLI Reference
+
+### `driftless --version`
+
+Show the installed version and exit.
+
+### `driftless --verbose`
+
+Enable debug-level logging to stderr.
 
 ### `driftless init`
 

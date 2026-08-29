@@ -15,6 +15,7 @@ dependencies = [
 
 [project.scripts]
 dl = "driftless.cli.main:app"
+driftless = "driftless.cli.main:app"
 driftless-cli = "driftless.cli.main:app"
 
 [build-system]
