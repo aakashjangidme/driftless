@@ -1,12 +1,26 @@
 ![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen.svg?logo=codecov)
-![Build](https://img.shields.io/badge/pass-143%20tests-brightgreen.svg?logo=github-actions)
-![PyPI](https://img.shields.io/pypi/v/driftless-cli?logo=python&logoColor=white)
+![Tests](https://img.shields.io/badge/pass-143%20tests-brightgreen.svg?logo=github-actions)
+![Release](https://img.shields.io/github/v/release/aakashjangidme/driftless?logo=github)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Python](https://img.shields.io/badge/python-3.12+-blue.svg)
+![Python](https://img.shields.io/badge/python-3.12+-blue.svg?logo=python)
+![GitHub stars](https://img.shields.io/github/stars/aakashjangidme/driftless?style=social&label=Stars)
+![Built for AI agents](https://img.shields.io/badge/built%20for-Claude%20Code-orange?logo=claude)
 
-# Driftless — AI-Native SDLC CLI
+# Driftless — AI-Native SDLC CLI for Coding Agents
 
-**Driftless** is a local-first CLI providing an **outer-loop SDLC workflow layer** around OpenSpec's **inner-loop specification workflow**. It is designed to be used by coding agents such as **Claude Code**.
+**Driftless** is a local-first CLI that provides an **outer-loop SDLC workflow layer** around [OpenSpec](https://openspec.sh)'s **inner-loop specification workflow**. It is designed for **coding agents** like **Claude Code** and **Cursor** to manage engineering work across the full lifecycle: from idea to specification, planning, implementation, verification, review, delivery, and completion.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Features](#features)
+- [Full SDLC Lifecycle](#full-sdlc-lifecycle)
+- [CLI Reference](#cli-reference)
+- [Contributing](#contributing)
+- [Test Status](#test-status)
+- [License](#license)
+- [Authors](#authors)
 
 ---
 
@@ -36,17 +50,9 @@ uv tool install --force .
 uv tool install --editable .
 ```
 
-## Table of Contents
-
-- [Installation](#installation)
-- [Quick Start](#quick-start)
-- [Full SDLC Lifecycle](#full-sdlc-lifecycle)
-- [CLI Reference](#cli-reference)
-- [Test Status](#test-status)
-- [License](#license)
-- [Authors](#authors)
-
 ---
+
+## Quick Start
 
 ```bash
 driftless init
@@ -56,6 +62,16 @@ driftless verify
 driftless review
 driftless finish
 ```
+
+---
+
+## Features
+
+- **Work lifecycle management** — `CREATED → SPECIFYING → PLANNING → IMPLEMENTING → VERIFYING → REVIEW → DELIVERY → DONE`
+- **OpenSpec integration** — bridges AI agents to OpenSpec's inner-loop specification workflow
+- **Git-aware state** — persists work state to `.driftless/` with full Git branch tracking
+- **Agent-ready** — designed for Claude Code, Cursor, and other coding agents
+- **CI/CD enforced** — branch protection, squash-merge, required reviews, and status checks
 
 ---
 
@@ -115,6 +131,26 @@ Complete work and archive OpenSpec change.
 
 ---
 
+## Contributing
+
+Contributions are welcome! All changes must go through a PR with CI passing.
+
+1. Fork the repo and create a feature branch
+2. Make your changes with signed commits
+3. Open a PR targeting `main`
+4. CI must pass (Lint & Type Check + Tests)
+5. At least 1 approving review required
+
+```bash
+git checkout -b feat/my-feature main
+# make changes...
+git commit -S -m "feat: ..."
+git push -u origin feat/my-feature
+gh pr create --fill
+```
+
+---
+
 ## Test Status
 
 All **143 tests** pass with **0 failures**.
@@ -130,4 +166,3 @@ MIT
 ## Authors
 
 [aakashjangidme](https://github.com/aakashjangidme)
-
